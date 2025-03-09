@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
+    background-color: lightgray;
+    overflow-x: hidden;
+  }
+  
+
+  .dashboard {
+    display: flex;
+    min-height: 100vh;
+    background-color: lightgray;
+  }
+  
+  .dashboard_left {
+    flex: 3;
+    padding: 20px;
+  }
+  
+  #taskInput {
+    width: auto;
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  
+  .dashboard_right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  
+  .main_header_actions_right_filter {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid green;
+    background-color: white;
+  }
+  
+  
+  .main-task__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    justify-content: start;
+  }
+  
+  .main-task__content-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    position: relative;
+  }
+  
+  .main-task__content-item__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .main-task__content-item__desc {
+    font-size: 0.9rem;
+    margin: 10px 0;
+  }
+  
+  .main-task__content-item__date {
+    font-size: 0.8rem;
+    text-align: right;
+  }
+  
+  .main-task__content-item__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .main-task__content-item__actions_status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  
+  .pending {
+    color: blue;
+    border: 1px solid blue;
+  }
+  
+  .completed {
+    color: green;
+    border: 1px solid green;
+  }
+
+  .checkTask {
+    -webkit-appearance: none; 
+    width: 20px;
+    height: 20px;
+    border: 2px solid red;  
+    border-radius: 10px;       
+    cursor: pointer;
+  }
+  
+  .checkTask:hover {
+    background-color: red; 
+  }
+    
+  .rounded-btn {
+    border-radius: 50%;
+    border: 1px solid gray;
+    background-color: white;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    transition: 0.2s;
+  }
+  
+  .rounded-btn:hover {
+    color: white;
+  }
+  
+  .rounded-btn.see-more:hover {
+    background-color: blue;
+  }
+  
+  .rounded-btn.modify:hover {
+    background-color: orange;
+  }
+  
+  .rounded-btn.validate:hover {
+    background-color: green;
+  }
+  
+  .checkTask {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  /* Modal */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: 0.5s;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    text-align: center;
+  }
+  
+  .modal_title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .form_item {
+    margin-bottom: 15px;
+  }
+  
+  .form_item label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form_item input,
+  .form_item textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  
+  .form_item-btn {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form_item-btn button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .form_item-btn button:hover {
+    background-color: blue;
+    color: white;
+  }
+  

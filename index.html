@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion de Tâches</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+>
+    <div class="dashboard_left">
+
+      <input type="text" id="taskInput" placeholder="Ajouter une tâche..." readonly>
+      <div id="main-task__content" class="main-task__content"></div>
+    </div>
+    
+    <div class="dashboard_right">
+      <select class="main_header_actions_right_filter">
+        <option value="0">Toutes</option>
+        <option value="1">En cours</option>
+        <option value="2">Annulé</option>
+        <option value="3">Terminé</option>
+      </select>
+    </div>
+  </div>
+
+ 
+  <div id="taskModal" class="modal">
+    <div class="modal-container">
+      <h2 class="modal_title">Ajouter une tâche</h2>
+      <form class="form">
+        <div class="form_item">
+          <label for="taskTitle">Titre</label>
+          <input type="text" id="taskTitle" name="taskTitle" required>
+        </div>
+        <div class="form_item">
+          <label for="taskDescription">Description</label>
+          <textarea id="taskDescription" name="taskDescription" required></textarea>
+        </div>
+        <div class="form_item">
+          <label for="taskDate">Date</label>
+          <input type="date" id="taskDate" name="taskDate" required>
+        </div>
+        <div class="form_item-btn">
+          <button type="submit">Confirmer</button>
+          <button id="closeModal" type="button">Annuler</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
